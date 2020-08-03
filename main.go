@@ -19,7 +19,6 @@ import (
 
 var (
 	configFile = flag.String("config", ".autorsync", "Config file")
-	logFile    = flag.String("logfile", "", "Log file to use (default is stdout)")
 	rsync      = flag.String("rsync", "/usr/bin/rsync", "rsync executable to use")
 
 	needsRsync      map[*mapping]bool

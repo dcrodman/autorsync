@@ -85,6 +85,9 @@ func readConfig(configFile string) *config {
 	for _, mapping := range conf.Mappings {
 		mapping.Source = os.ExpandEnv(mapping.Source)
 		mapping.Target = os.ExpandEnv(mapping.Target)
+
+		// Automatically ignore the autorsync config file.
+		mapping.Exclusions = append(mapping.Exclusions, configFile)
 	}
 
 	return &conf

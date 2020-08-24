@@ -42,7 +42,8 @@ Example:
     "settings": {
         "interval": "3s",
         "rsync_args": [
-            "--dry-run"
+            "--dry-run",
+            "`ssh -i ~/.ssh/some_key`"
         ]
     },
     "mappings": [
